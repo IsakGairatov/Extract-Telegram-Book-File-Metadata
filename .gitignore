@@ -1,0 +1,19 @@
+# Переменные окружения и секреты
+.env
+.env.*
+
+# Но оставить пример конфигурации
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Telethon sessions
+*.session
+*.session-journal
+
+# База данных SQLite
+*.db
