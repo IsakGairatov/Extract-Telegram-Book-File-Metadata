@@ -1,0 +1,10 @@
+django-qrcode==0.3
+dotenv==0.9.9
+pillow==12.3.0
+pyaes==1.6.1
+pyasn1==0.6.4
+pypdf==6.20.1
+python-dotenv==1.2.4
+qrcode==8.2
+rsa==4.9.1
+Telethon==1.45.0
