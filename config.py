@@ -24,3 +24,6 @@ ZIP_FB2_CHUNK_SIZE = 32 * 1024
 
 # Максимум сжатого FB2, который разрешаем скачать
 MAX_ZIP_FB2_CHUNK_SIZE = 512 * 1024
+
+MAX_BOOK_FILE_SIZE = 50 * 1024 * 1024   # 50 МБ
+

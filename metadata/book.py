@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from config import MAX_BOOK_FILE_SIZE
 from metadata.fb2 import get_fb2_metadata
 from metadata.epub import get_epub_metadata
 from metadata.zip import get_zip_metadata
@@ -48,6 +49,19 @@ async def get_book_metadata(
 
         raise ValueError(
             "Сообщение не содержит документ"
+        )
+
+    # --------------------------------------------------------
+    # Лимит размера файла
+    # --------------------------------------------------------
+
+    file_size = message.document.size or 0
+
+    if file_size > MAX_BOOK_FILE_SIZE:
+
+        raise ValueError(
+            f"Файл больше {MAX_BOOK_FILE_SIZE / 1024 / 1024:.0f} МБ "
+            f"({file_size / 1024 / 1024:.1f} МБ) — пропуск"
         )
 
     # --------------------------------------------------------
